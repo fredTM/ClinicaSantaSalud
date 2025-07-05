@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "db5be176-25d0-4fa2-8cdf-14063832ba2a",
+		"name": "Clinica Santa Salud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4438599"
+	},
+	"item": [
+		{
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "Listar Pacientes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/pacientes/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ClinicaSantaSalud-1.0",
+								"api",
+								"pacientes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Paciente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nombre\": \"Hector\",\n  \"apellido\": \"Melendez\",\n  \"dni\": \"35123123\",\n  \"fechaNacimiento\": \"1996-05-15\",\n  \"direccion\": \"Av. Los Merengedes 689\",\n  \"telefono\": \"928822312\",\n  \"correo\": \"hector.melendez@email.com\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ClinicaSantaSalud-1.0",
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Paciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/pacientes/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ClinicaSantaSalud-1.0",
+								"api",
+								"pacientes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Paciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Valeria\",\r\n  \"apellido\": \"Gutiérrez\",\r\n  \"dni\": \"98765432\",\r\n  \"fechaNacimiento\": \"1992-05-15\",\r\n  \"direccion\": \"Av. Los Jardines 789\",\r\n  \"telefono\": \"922334455\",\r\n  \"correo\": \"valeria.gutierrez@email.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/pacientes/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ClinicaSantaSalud-1.0",
+								"api",
+								"pacientes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Citas",
+			"item": [
+				{
+					"name": "Listar Citas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/citas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ClinicaSantaSalud-1.0",
+								"api",
+								"citas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Cita",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"pacienteId\": 1,\n  \"medicoId\": 2,\n  \"consultorioId\": 3,\n  \"fecha\": \"2025-07-01T10:30:00\",\n  \"motivo\": \"Chequeo general anual\",\n  \"estado\": \"pendiente\"\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/citas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ClinicaSantaSalud-1.0",
+								"api",
+								"citas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Cita",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pacienteId\": 2,\r\n  \"medicoId\": 1,\r\n  \"consultorioId\": 2,\r\n  \"fecha\": \"2025-03-01T10:30:00\",\r\n  \"motivo\": \"Chequeo general anual actualizado\",\r\n  \"estado\": \"pendiente\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/citas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ClinicaSantaSalud-1.0",
+								"api",
+								"citas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cita",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/citas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ClinicaSantaSalud-1.0",
+								"api",
+								"citas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Listar Historial Médico",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/historiales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ClinicaSantaSalud-1.0",
+						"api",
+						"historiales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Historial Médico",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/historiales",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ClinicaSantaSalud-1.0",
+						"api",
+						"historiales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ClinicaSantaSalud-1.0",
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ClinicaSantaSalud-1.0",
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usuario\": \"fred\",\n    \"contraseña\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/ClinicaSantaSalud-1.0/api/usuarios/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ClinicaSantaSalud-1.0",
+						"api",
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

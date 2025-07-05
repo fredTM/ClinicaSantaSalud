@@ -1,0 +1,16 @@
+MANUAL DE USUARIO
+
+1. Módulo Pacientes:
+- Permite registrar, consultar y eliminar pacientes.
+- Campos: nombre, DNI, teléfono, correo.
+
+2. Módulo Citas:
+- Asocia fecha, hora y paciente.
+- Validación de solapamiento de horarios.
+
+3. Módulo Historial:
+- Permite ingresar observaciones clínicas.
+
+4. Navegación:
+- Interfaz desarrollada en HTML/CSS.
+- Accesible vía navegador web.

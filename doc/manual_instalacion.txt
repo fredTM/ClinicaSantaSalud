@@ -1,0 +1,19 @@
+MANUAL DE INSTALACIÓN
+
+1. Requisitos:
+- JDK 11
+- Tomcat 9 o superior
+- MySQL Server 8
+- Maven instalado
+
+2. Base de Datos:
+- Crear base de datos `clinica_santa_salud`
+- Ejecutar el script `/sql/clinica_santa_salud.sql`
+
+3. Backend:
+- Descomprimir `/src/ClinicaSantaSalud-Jersey.zip`
+- Importar como proyecto Maven en Eclipse
+- Construir `.war` y desplegar en Tomcat `webapps/`
+
+4. Acceso API:
+- http://localhost:8080/ClinicaSantaSalud-1.0/api/pacientes
